@@ -3,23 +3,26 @@
 
 int main(void) {
   
-  int codCidade, numVei, numAcidentes, numeroVeiculosTotal=0, numAcidentesRS=0, cidadesDoRS=0, menorInd=0, maiorInd, codCidadeMaiorInd, codCidadeMenorInd=0, cont=0, n;
+  int codCidade, numVei, numAcidentes, numeroVeiculosTotal=0, numAcidentesRS=0, cidadesDoRS=0, menorInd=0, maiorInd=0, codCidadeMaiorInd=0, codCidadeMenorInd=0, cont=0;
   char estado[3];
 
   while(cont<200){
     printf("Digite o código da cidade:\n");
     scanf("%d", &codCidade);
     printf("Digite o estado a qual essa cidade pertence:\n");
-    scanf("%s", &*estado);
+    scanf(" %s", estado);
     printf("Digite o numero de veículos de passeio da cidade no ano de 2012:\n");
     scanf("%d", &numVei);
     printf("Digite o numero de acidentes de trânsito com vítimas da cidade no ano de 2012:\n");
     scanf("%d", &numAcidentes);
 
-    if(numAcidentes> maiorInd){
+	if(cont==0){
+		menorInd = numAcidentes;
+		maiorInd = numAcidentes;
+	}else if(numAcidentes> maiorInd){
       maiorInd = numAcidentes;
       codCidadeMaiorInd = codCidade;
-    }else if(menorInd==0 || numAcidentes<menorInd){
+    }else if(numAcidentes<menorInd){
       menorInd = numAcidentes;
       codCidadeMenorInd = codCidade;
     }

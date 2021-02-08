@@ -14,11 +14,12 @@ int main(void) {
     printf("Digite a altura\n");
     scanf("%d", &altura);
 
-    if(maiorIdade<idade){
+	if(cont==0){
+		menorIdade = idade;
+		maiorIdade = idade;
+	}else if(maiorIdade<idade){
       maiorIdade=idade;
     }else if(idade<menorIdade){
-      menorIdade = idade;
-    }else if(menorIdade==0){
       menorIdade = idade;
     }
 
