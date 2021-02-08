@@ -17,17 +17,20 @@ int main(void) {
 
       somaDosSalarios+=salario;
       
-      if(idade>maiorIdade){
-        maiorIdade = idade;
+      if(cont==0){
+      	menorIdade = idade;
+      	maiorIdade =idade;
       }
-      else if(menorIdade==0){
-        menorIdade=idade;
+      else if(idade>maiorIdade){
+        maiorIdade = idade;
       }
       else if(idade<menorIdade){
         menorIdade = idade;
       }
 
-      if(sexo=='f' && salario<=100.0) qtdMulSal100++;
+      if(sexo=='f' || sexo=='F' && salario<=100.0){
+       qtdMulSal100++;
+      }
       cont++;
     }
   }
