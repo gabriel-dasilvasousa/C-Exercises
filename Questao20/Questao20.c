@@ -19,10 +19,12 @@ int main(void) {
 	if(cont==0){
 		menorInd = numAcidentes;
 		maiorInd = numAcidentes;
-	}else if(numAcidentes> maiorInd){
+	}
+	else if(numAcidentes> maiorInd){
       maiorInd = numAcidentes;
       codCidadeMaiorInd = codCidade;
-    }else if(numAcidentes<menorInd){
+    }
+    else if(numAcidentes<menorInd){
       menorInd = numAcidentes;
       codCidadeMenorInd = codCidade;
     }

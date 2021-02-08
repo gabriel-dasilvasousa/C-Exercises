@@ -17,9 +17,11 @@ int main(void) {
 	if(cont==0){
 		menorIdade = idade;
 		maiorIdade = idade;
-	}else if(maiorIdade<idade){
+	}
+	else if(maiorIdade<idade){
       maiorIdade=idade;
-    }else if(idade<menorIdade){
+    }
+    else if(idade<menorIdade){
       menorIdade = idade;
     }
 
@@ -27,7 +29,8 @@ int main(void) {
     if(sexo == 0){
       somaAlturaMulheres+=altura;
       mulheres++;
-    }else if(sexo==1){
+    }
+    else if(sexo==1){
       somaIdadeHomens+=idade;
       homens++;
     }
